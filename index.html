@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Тетрис 🎮</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+</head>
+<body>
+    <div class="game-wrap">
+        <div class="game-area">
+            <canvas id="board" width="300" height="600"></canvas>
+
+            <div id="overlay" class="overlay hidden">
+                <h2 id="overlay-title">GAME OVER</h2>
+                <p id="overlay-text">Нажми «Заново»</p>
+                <button id="overlay-btn">Играть заново</button>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <h1>ТЕТРИС</h1>
+
+            <div class="stats">
+                <div class="stat"><span>Очки</span><b id="score">0</b></div>
+                <div class="stat"><span>Линии</span><b id="lines">0</b></div>
+                <div class="stat"><span>Уровень</span><b id="level">1</b></div>
+            </div>
+
+            <div class="next">
+                <span>Следующая:</span>
+                <canvas id="next" width="120" height="120"></canvas>
+            </div>
+
+            <div class="controls-info">
+                <b>Управление</b>
+                <p>← → — двигать</p>
+                <p>↑ — поворот</p>
+                <p>↓ — ускорить</p>
+                <p>Пробел — сброс</p>
+            </div>
+
+            <button id="restart" class="restart-btn">Заново (R)</button>
+        </aside>
+    </div>
+
+    <!-- Мобильные кнопки -->
+    <div class="mobile-controls">
+        <button data-action="left">←</button>
+        <button data-action="rotate">↻</button>
+        <button data-action="right">→</button>
+        <button data-action="down">↓</button>
+        <button data-action="drop">⤓</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
